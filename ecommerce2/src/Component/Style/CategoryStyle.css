@@ -1,0 +1,38 @@
+/* Your existing CSS */
+
+.photo-gallery {
+  display: flex;
+  margin-top: 40px; /* Add margin to separate from top */
+}
+
+.photo-gallery img {
+  width: 370px;
+  height: 600px;
+  object-fit: cover;
+  margin-right: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-gallery img:hover {
+  transform: translateY(-40px); /* Move image upwards */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Add shadow */
+}
+
+.photo-gallery img::before {
+  content: attr(alt);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.photo-gallery img:hover::before {
+  opacity: 1;
+  transform: translateY(0);
+}

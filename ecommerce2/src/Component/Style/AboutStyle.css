@@ -1,0 +1,30 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.about {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.about h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  margin-bottom: 15px;
+}
